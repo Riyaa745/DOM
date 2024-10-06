@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- functions events addEventListener -->
+    <style>
+        div {
+            height: 300px;
+            width: 500px;
+            border-radius: 50%;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+
+        button {
+            padding: 5px 30px;
+            border-radius: 10px;
+            border: navajowhite;
+            color: wheat;
+            background-color: green;
+            margin: 12px 0 0 14rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=""></div>
+    <button onclick="change()">ON</button>
+    <script>
+        let btn = document.querySelector("div");
+        let btn2 = document.querySelector("button");
+        let on = 0;
+        function change(){
+            if(on==0){
+            btn.style.backgroundColor ="white";
+            btn2.style.backgroundColor ="red";
+            btn2.innerText ="OFF";
+            on = 1;
+            }else{
+                btn.style.backgroundColor ="yellow";
+                btn2.style.backgroundColor ="green";
+                btn2.innerText ="ON";
+                on = 0;
+            }
+        }
+
+       
+         
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown with hover</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+           
+        }
+
+        .container {
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            background-color: rebeccapurple;
+            color: white;
+            
+        }
+
+        ul {
+            list-style: none;
+        
+        }
+
+        .first {
+            display: flex;
+           
+
+        }
+
+        li {
+            padding: 15px;
+            cursor: pointer;
+        }
+
+        .sub {
+            position: relative;
+            
+
+        }
+
+        .sub:hover .sub_menu {
+            display: block;
+           
+           
+            
+        }
+
+        .sub_menu {
+            position: absolute;
+            background-color: rebeccapurple;
+           transform: translate(-6px, 15px);
+           transition: all 4s ease;
+            display: none;
+
+        }
+
+        .click:hover {
+            background-color: red;
+            color: black;
+            font-weight: 800;
+        }
+       
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo"> LOgo</div>
+        <div class="links">
+            <ul class="first">
+                <li>home</li>
+                <li>About us</li>
+                <li class="sub">Courses
+                    <div class="sub_menu">
+                        <ul>
+                            <li class="click">Bcom</li>
+                            <li class="click">Bca</li>
+                            <li class="click">Bsc Cs</li>
+                            <li class="click">Masters</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>Login</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

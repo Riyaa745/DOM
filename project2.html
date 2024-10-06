@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instagram</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f2f4f7;
+
+        }
+
+        .card {
+            box-shadow: 0px 0px 2px grey;
+            width: 18rem;
+            height: 20rem;
+            border-radius: 6px;
+            margin: 2rem 0rem;
+            margin-inline: auto;
+            background-color: white;
+            line-height: 2.5rem;
+        }
+
+        img {
+            width: 100%;
+            height: 80%;
+            position: relative;
+        }
+
+        .icon i {
+            font-size: 2rem;
+            margin-left: 1rem;
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0.8;
+            transition: transform  ease 0.2s ;
+            
+        }
+
+        span i {
+            font-size: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img src="image/guide-2.jpg">
+        <span> <i class="ri-heart-fill"></i></span>
+        <!-- <div class="icon">
+            <i class="ri-heart-fill"></i>
+        </div> -->
+    </div>
+    <script>
+        let icon = document.querySelector("img");
+        let dil = document.querySelector("span");
+       let gayab = 0;
+        icon.addEventListener("click", function heart() {
+            if (gayab == 0) {
+                dil.style.transform = "translate(-50%, -50%) scale(1)";
+                dil.style.opacity = 0.8;
+                setTimeout(() => {
+                    dil.style.transform = "translate(-50%, -50%) scale(0)";
+                    // dil.style.opacity = 0;
+                }, 1000);
+                setTimeout(() => {
+                    dil.style.transform = "translate(-50%, -50%) scale(0)";
+                    dil.style.opacity = 0;
+                }, 500);
+               
+            }
+        })
+    </script>
+</body>
+
+</html>
+<!-- 
+<script>
+    setTimeout(() => {
+  console.log("Delayed for 1 second.");
+}, 1000);
+setTimeout(() => {
+  alert("Delayed for 1 second.");
+}, 2000); -->
+
+<!-- // setTimeOut(code,delay) -->
+</script>

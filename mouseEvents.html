@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic(mouseevent)</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+
+        }
+
+        .main {
+            height: 100%;
+            width: 100%;
+            background-color: rebeccapurple;
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .cursor {
+            height: 20px;
+            width: 20px;
+            background-color: white;
+            position: absolute;
+            border-radius: 50%;
+            mix-blend-mode: difference;
+
+        }
+
+        h1 {
+            color: white;
+            font-size: 9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- MouseEvent -->
+
+    <!-- mouse enter leave over -->
+    <!-- mouseenter  A pointing device is moved onto the element that has the listener attached.
+mouseleave  A pointing device is moved off the element that has the listener attached.
+mouseover   A pointing device is moved onto the element that has the listener attached or onto one of its children.
+mouseout    A pointing device is moved off the element that has the listener attached or off one of its children. -->
+
+
+    <div class="main">
+        <h1>Riya Sainwal</h1>
+        <div class="cursor"></div>
+    </div>
+    <script>
+        let main = document.querySelector(".main");
+        let cursor = document.querySelector(".cursor");
+        main.addEventListener("mousemove", function (e) {
+
+            cursor.style.top = e.y + "px"; 
+            //  crusor div will move with mouse
+            cursor.style.left = e.x + "px";
+            cursor.style.transform="translate(-50%,-50%)";
+
+
+            // cursor.style.backgroundColor="green";;
+            // main.style.backgroundColor="orange";
+            console.log(e.x);
+            console.log(e.y);
+        })
+
+
+    </script>
+</body>
+
+</html>

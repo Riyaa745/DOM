@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend request</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f2f4f7;
+            font-family: cursive;
+
+        }
+
+        .card {
+            box-shadow: 0px 0px 2px grey;
+            width: 15rem;
+            height: 20rem;
+            border-radius: 6px;
+            margin: 2rem 0rem;
+            margin-inline: auto;
+            background-color: white;
+            line-height: 1.8rem;
+        }
+
+        img {
+            padding: 11px 0 0 10px;
+            width: 95%;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        button {
+            padding: 8px;
+            background-color: white;
+            width: 7rem;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 6px 9px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img src="image/guide-2.jpg">
+        <h2>Vikas Kandari</h2>
+        <p>Stranger</p>
+        <div class="btns">
+            <button onclick="change()">Remove friend</button>
+            <button onclick="change2()">Add friend</button>
+        </div>
+    </div>
+    <script>
+        let btn1 = document.querySelector("p");
+        function change() {
+            btn1.style.color = "red";
+            btn1.innerText = "stranger";
+
+        }
+        function change2() {
+            btn1.style.color = "green";
+            btn1.innerText = "friend";
+        }
+    </script>
+</body>
+
+</html>

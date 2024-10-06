@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project3 (mouseEvent)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            background-color: purple;
+            height: 500px;
+            /* overflow: hidden; */
+        }
+
+        .co1{
+            font-size: 30rem;
+        }
+        .content {
+            /* position: relative; */
+           height: 150px;
+           width: 150px;
+            background-color: red;
+            margin: 5px 0;
+            border-bottom: 2px solid black;
+        }
+
+        img {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50% ;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+        }
+
+        h1 {
+            font-size: 10vh;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Hi</h1>
+            <img src="image/guide-2.jpg">
+        </div>
+        <div class="content">
+            <h1>Hi</h1>
+            <img src="image/client-1.jpg">
+        </div>
+        <div class="content">
+            <h1>Hi</h1>
+            <img src="image/client-2.jpg">
+        </div>
+    </div>
+
+    <script>
+
+        let img = document.querySelector("img")
+        let con = document.querySelectorAll(".content")
+        let container = document.querySelector(".container")
+        con.forEach((e) => {
+            e.addEventListener("mouseenter", function (a) {
+                e.childNodes[3].style.opacity = 1;
+
+            });
+            e.addEventListener("mousemove", function (a) {
+                e.childNodes[3].style.left = a.x + "px";
+                e.childNodes[3].style.top = a.y + "px";
+                // e.childNodes[3].style.transform = "translate(-50%,-50%)";
+
+            });
+            e.addEventListener("mouseleave", function (a) {
+                e.childNodes[3].style.opacity = 0;
+
+            });
+
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>

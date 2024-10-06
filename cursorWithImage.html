@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 800px;
+        }
+
+        .main {
+            height: 100%;
+            width: 100%;
+            /* position: relative; */
+            background-color: rebeccapurple;
+        }
+
+        .d1 {
+            height: 25%;
+            width: 100%;
+            background-color: red;
+            border-bottom: 1px solid black;
+            /* border-radius: 50%; */
+            /* position: absolute; */
+        }
+
+        img {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="d1">
+            <h1>Tere Naam</h1>
+            <img src="https://s.yimg.com/fz/api/res/1.2/GtKdjzDvU339Hwqn8j.S7Q--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI2MDtxPTgwO3c9MTkw/https://s.yimg.com/zb/imgv1/905f658b-44ac-3e73-87be-6ddcaaeb4926/t_500x300"
+                alt="">
+        </div>
+        <div class="d1">
+            <h1>Tere Naam</h1>
+            <img src="https://s.yimg.com/fz/api/res/1.2/GtKdjzDvU339Hwqn8j.S7Q--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI2MDtxPTgwO3c9MTkw/https://s.yimg.com/zb/imgv1/905f658b-44ac-3e73-87be-6ddcaaeb4926/t_500x300"
+                alt="">
+        </div>
+    </div>
+
+    <script>
+        let main = document.querySelector(".main");
+        let cr = document.querySelector(".cursor");
+        let d1 = document.querySelectorAll(".d1");
+        // console.log(d1)
+        d1.forEach((e) => {
+            e.addEventListener("mouseenter", function () {
+                e.style.backgroundColor = "black";
+                e.style.color = "white";
+            })
+            e.addEventListener("mouseleave", function () {
+                e.style.backgroundColor = "white";
+                e.style.color = "black";
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>

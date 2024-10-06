@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create element</title>
+</head>
+<body>
+
+    <div class="div">
+
+    </div>
+    
+    <script>
+        const div = document.querySelector(".div")
+        const createE = document.createElement('p')
+        const createEl = document.createElement('div')
+    
+        createE.innerHTML="<h1>Hi</h1> <p>lorem lorem lorem </p>";
+        createEl.innerText= "lorem2";
+        div.appendChild(createE);
+        createEl.className="para";
+        document.body.appendChild(createEl);
+        
+
+        
+    </script>
+</body>
+
+</html>

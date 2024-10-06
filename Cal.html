@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 22rem;
+            background-color: rgb(0 0 0 / 62%);
+            padding: 1rem 1rem;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        button {
+            /* border-radius: 20px;
+            background-color: grey;
+            padding: 15px;
+            text-align: center;
+            margin: .2rem; */
+            border-radius: 13px;
+            background-color: grey;
+            padding: 12px;
+            text-align: center;
+            margin: 0.2rem;
+            border: none;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .icon i {
+            font-size: 1.5rem;
+        }
+
+        .upper {
+            padding-bottom: 1rem;
+        }
+
+        .lower {
+            display: grid;
+            grid-template-columns: repeat(4, 5rem);
+            grid-template-rows: repeat(5, 3rem);
+            padding-top: 1rem;
+            border-top: 1px solid grey;
+        }
+
+        .nav_down {
+            padding-bottom: 1rem;
+        }
+
+        input {
+            height: 200px;
+            width: 98%;
+            background-color: #0000008c;
+            color: white;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+
+        span {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="upper">
+            <div class="nav icon">
+                <i class="ri-fullscreen-exit-line"></i>
+                <i class="ri-settings-3-line"></i>
+
+            </div>
+            <input type="text" name="" id="">
+        </div>
+        <div class="nav_down icon">
+            <i class="ri-history-fill"></i>
+        </div>
+
+        <div class="lower">
+            <span>
+                <button>AC</button>
+            </span>
+            <span>
+                <button><i class="ri-delete-back-2-line"></i></button>
+            </span>
+            <span>
+                <button>+/-</button>
+            </span>
+            <span>
+                <button><i class="ri-divide-line"></i></button>
+            </span>
+            <span>
+                <button class="head">7</button>
+            </span>
+            <span>
+                <button class="head">8</button>
+            </span>
+            <span>
+                <button class="head">9</button>
+            </span>
+            <span>
+                <button class="head">X</button>
+            </span>
+            <span>
+                <button class="head">4</button>
+            </span>
+            <span>
+                <button class="head">5</button>
+            </span>
+            <span>
+                <button class="head">6</button>
+            </span>
+            <span>
+                <button class="head">-</button>
+            </span>
+            <span>
+                <button class="head">1</button>
+            </span>
+            <span>
+                <button class="head">2</button>
+            </span>
+            <span>
+                <button class="head">3</button>
+            </span>
+            <span>
+                <button class="head">+</button>
+            </span>
+            <span>
+                <button>%</button>
+            </span>
+            <span>
+                <button class="head">0</button>
+            </span>
+            <span>
+                <button class="head">.</button>
+            </span>
+            <span>
+                <button class="head">=</button>
+            </span>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
