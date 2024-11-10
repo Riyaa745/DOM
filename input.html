@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="input">
+    <button id="p">Click Me</button>
+    <p id="p1"></p>
+    <script>
+        let x = document.querySelector("#input");
+        let y = document.querySelector("#p");
+        let p1 = document.querySelector("#p1");
+        y.addEventListener("click", function () {
+            p1.innerHTML = `<table><tr><td>${x.value}</td></tr></table>`;
+            console.log(x.value)
+        })
+    </script>
+</body>
+
+</html>

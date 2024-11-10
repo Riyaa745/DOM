@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <label for="">Name: </label>
+        <input type="text" id="name"><br>
+
+        <label>Maths: </label>
+        <input type="text" id="maths"><br>
+
+        <label>Science: </label>
+        <input type="text" id="sci"><br>
+
+        <label>English: </label>
+        <input type="text" id="eng"><br>
+
+        <input type="submit" id="submit"><br>
+
+        <p id="show"></p>
+    </div>
+
+    <script>
+        let name = document.querySelector("#name");
+        let maths = document.querySelector("#maths");
+        let sci = document.querySelector("#sci");
+        let eng = document.querySelector("#eng");
+        let sub = document.querySelector("#submit");
+        let show = document.querySelector("#show");
+        let display = "";
+
+        sub.addEventListener("click", function () {
+            let sum = parseInt(maths.value) + parseInt(sci.value) + parseInt(eng.value);
+            let percent = (sum / 300) * 100;
+            check(percent);
+            tableData(name, maths, sci, eng,percent, show) ;
+
+
+            // console.log(percent)
+        })
+
+        function check(percent) {
+            if (percent < 40) {
+               display ="Fail";
+
+            } else {
+                display ="pass";
+            }
+        }
+
+        function tableData(name, maths, sci, eng,percent, show) {
+            show.innerHTML = `
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Maths</th>
+                    <th>Science</th>
+                    <th>English</th>
+                    <th>Result</th>
+                    <th>status</th>
+        
+                </tr>
+                <tr>
+                    <th>${name.value}</th>
+                    <th>${maths.value}</th>
+                    <th>${sci.value}</th>
+                    <th>${eng.value}</th>
+                    <th>${percent}</th>
+                    <th> ${display}</th>
+                </tr>
+            </table>`
+        }
+    </script>
+</body>
+
+</html>
