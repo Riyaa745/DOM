@@ -23,17 +23,14 @@
         }
 
         button {
-            /* border-radius: 20px;
-            background-color: grey;
-            padding: 15px;
-            text-align: center;
-            margin: .2rem; */
             border-radius: 13px;
             background-color: grey;
-            padding: 12px;
+            /* padding: 10px 28px; */
             text-align: center;
-            margin: 0.2rem;
+            /* margin: 0.2rem; */
             border: none;
+            height: 41px;
+            width: 71px;
         }
 
         .nav {
@@ -69,6 +66,8 @@
             color: white;
             border-radius: 10px;
             margin-top: 1rem;
+            font-size: 4rem;
+            text-align: right;
         }
 
         span {
@@ -85,77 +84,80 @@
                 <i class="ri-settings-3-line"></i>
 
             </div>
-            <input type="text" name="" id="">
+            <input type="text" name="" id="output">
         </div>
         <div class="nav_down icon">
             <i class="ri-history-fill"></i>
         </div>
 
         <div class="lower">
-            <span>
-                <button>AC</button>
-            </span>
-            <span>
-                <button><i class="ri-delete-back-2-line"></i></button>
-            </span>
-            <span>
-                <button>+/-</button>
-            </span>
-            <span>
-                <button><i class="ri-divide-line"></i></button>
-            </span>
-            <span>
-                <button class="head">7</button>
-            </span>
-            <span>
-                <button class="head">8</button>
-            </span>
-            <span>
-                <button class="head">9</button>
-            </span>
-            <span>
-                <button class="head">X</button>
-            </span>
-            <span>
-                <button class="head">4</button>
-            </span>
-            <span>
-                <button class="head">5</button>
-            </span>
-            <span>
-                <button class="head">6</button>
-            </span>
-            <span>
-                <button class="head">-</button>
-            </span>
-            <span>
-                <button class="head">1</button>
-            </span>
-            <span>
-                <button class="head">2</button>
-            </span>
-            <span>
-                <button class="head">3</button>
-            </span>
-            <span>
-                <button class="head">+</button>
-            </span>
-            <span>
-                <button>%</button>
-            </span>
-            <span>
-                <button class="head">0</button>
-            </span>
-            <span>
-                <button class="head">.</button>
-            </span>
-            <span>
-                <button class="head">=</button>
-            </span>
+           
+            <button onclick="clearAll()">AC</button>
+            <button><i class="ri-delete-back-2-line"></i></button>
+            
+            <button onclick="operators(this.value)" ondblclick="operators(this.value)">/</button>
+            
+            <button><i class="ri-divide-line"></i></button>
+            <button class="head"  onclick="screenOutput(this.value)" value="7">7</button>
+            <button class="head"  onclick="screenOutput(this.value)" value="8">8</button>
+            
+            
+            <button class="head"  onclick="screenOutput(this.value)" value="9">9</button>
+            <button class="head"  onclick="operators(this.value)" value="*">x</button>
+            <button class="head"  onclick="screenOutput(this.value)" value="4">4</button>
+            
+            <button class="head"  onclick="screenOutput(this.value)" value="5">5</button>
+            <button class="head"  onclick="screenOutput(this.value)" value="6">6</button>
+            <button class="head"  onclick="operators(this.value)" value="-">-</button>
+            
+            <button class="head"  onclick="screenOutput(this.value)" value="1">1</button>
+            <button class="head"  onclick="screenOutput(this.value)" value="2">2</button>
+            <button class="head"  onclick="screenOutput(this.value)" value="3">3</button>
+            
+            <button class="head"  onclick="operators(this.value)" value="+">+</button>
+            <button onclick="operators(this.value)" value="%">%</button>
+            <button class="head"  onclick="screenOutput(this.value)" value="0">0</button>
+            <button class="head"  onclick="screenOutput(this.value)" value=".">.</button>
+            <button class="head"  onclick="result()" value="=">=</button>
+            
 
 
         </div>
     </div>
+    <script>
+        let out = document.getElementById("output");
+        let op1, op2, opr, res;
+
+        function screenOutput(x){
+            out.value += x;
+        }
+
+        function operators(y){
+            op1 = parseFloat(out.value);
+            out.value = '';
+            opr = y
+        }
+        function result(){
+            op2 = parseFloat(out.value)
+            res = 0;
+            if(opr=='+'){
+                res = op1 + op2
+            }
+            else if(opr=='-'){
+                res = op1 - op2
+            }
+            else if(opr=='*'){
+                res = op1 * op2
+            }
+            else if(opr=='/'){
+                res = op1 / op2
+            }
+            out.value = res;
+        }
+        function clearAll(){
+            out.value = '';
+        }
+    </script>
 </body>
 
 </html>
